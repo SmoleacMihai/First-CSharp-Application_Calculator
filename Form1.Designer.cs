@@ -186,6 +186,7 @@
             this.Equal_Symbol.TabIndex = 11;
             this.Equal_Symbol.Text = "=";
             this.Equal_Symbol.UseVisualStyleBackColor = true;
+            this.Equal_Symbol.Click += new System.EventHandler(this.Equal_Symbol_Click);
             // 
             // Button0
             // 
@@ -221,6 +222,7 @@
             this.Division.TabIndex = 14;
             this.Division.Text = "/";
             this.Division.UseVisualStyleBackColor = true;
+            this.Division.Click += new System.EventHandler(this.Division_Click);
             // 
             // Substraction
             // 
@@ -232,6 +234,7 @@
             this.Substraction.TabIndex = 13;
             this.Substraction.Text = "-";
             this.Substraction.UseVisualStyleBackColor = true;
+            this.Substraction.Click += new System.EventHandler(this.Substraction_Click);
             // 
             // Addition
             // 
@@ -243,6 +246,7 @@
             this.Addition.TabIndex = 12;
             this.Addition.Text = "+";
             this.Addition.UseVisualStyleBackColor = true;
+            this.Addition.Click += new System.EventHandler(this.Addition_Click);
             // 
             // Multiplication
             // 
@@ -254,6 +258,7 @@
             this.Multiplication.TabIndex = 15;
             this.Multiplication.Text = "*";
             this.Multiplication.UseVisualStyleBackColor = true;
+            this.Multiplication.Click += new System.EventHandler(this.Multiplication_Click);
             // 
             // PowerOfTwo
             // 
@@ -301,6 +306,7 @@
             this.Cosinus.TabIndex = 19;
             this.Cosinus.Text = "cos";
             this.Cosinus.UseVisualStyleBackColor = true;
+            this.Cosinus.Click += new System.EventHandler(this.Cosinus_Click);
             // 
             // Sinus
             // 

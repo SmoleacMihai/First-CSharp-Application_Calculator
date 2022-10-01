@@ -5,12 +5,16 @@ namespace Calculator
 
     public partial class Form1 : Form
     {
+        double firstNumber;
+        double secondNumber;
+        string currentOperation;
 
         public Form1()
         {
             InitializeComponent();
             this.MaximizeBox = false;
             this.MinimizeBox = false;
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -118,7 +122,7 @@ namespace Calculator
             double powerValue = Convert.ToDouble(this.DisplayScreen.Text);
             // powerValue = 0.3 * 0.4;
             powerValue *= powerValue;
-            powerValue = Math.Round(powerValue, 5);
+            powerValue = Math.Round(powerValue, 2);
             this.DisplayScreen.Text = Convert.ToString(powerValue);
         }
 
@@ -132,6 +136,7 @@ namespace Calculator
         {
             this.MemoryScreen.Text = "0";
             this.DisplayScreen.Text = "0";
+            
 
         }
 
@@ -214,21 +219,89 @@ namespace Calculator
         {
             double sqrtValue = Convert.ToDouble(this.DisplayScreen.Text);
             sqrtValue = Math.Sqrt(sqrtValue);
-            sqrtValue = Math.Round(sqrtValue, 5);
+            sqrtValue = Math.Round(sqrtValue, 2);
             this.DisplayScreen.Text = Convert.ToString(sqrtValue);
         }
 
         private void Dot_Click(object sender, EventArgs e)
         {
-            if (!(this.DisplayScreen.Text == "0,") && (this.DisplayScreen.Text == "0"))
+            bool dotPresent = this.DisplayScreen.Text.IndexOf(",") == -1;
+            if (dotPresent)
             {
-                this.DisplayScreen.Text = "0,";
+                this.DisplayScreen.Text += ",";
             }
+
+
+            //  if (!(this.DisplayScreen.Text == "0,") && (this.DisplayScreen.Text == "0"))
+            //  {
+            //      this.DisplayScreen.Text = "0,";
+            //  }
         }
 
         private void MemoryClear_Click(object sender, EventArgs e)
         {
             this.MemoryScreen.Text = "0";
+        }
+
+        private void Equal_Symbol_Click(object sender, EventArgs e)
+        {
+            secondNumber = Convert.ToDouble(this.DisplayScreen.Text);
+            switch (currentOperation)
+            {
+                case "+":
+                    this.DisplayScreen.Text = Convert.ToString(firstNumber + secondNumber);
+                    firstNumber = 0;
+                    secondNumber = 0;
+                    break;
+                case "-":
+                    this.DisplayScreen.Text = Convert.ToString(firstNumber - secondNumber);
+                    firstNumber = 0;
+                    secondNumber = 0;
+                    break;
+                case "*":
+                    this.DisplayScreen.Text = Convert.ToString(firstNumber * secondNumber);
+                    firstNumber = 0;
+                    secondNumber = 0;
+                    break;
+                case "/":
+                    this.DisplayScreen.Text = Convert.ToString(firstNumber / secondNumber);
+                    firstNumber = 0;
+                    secondNumber = 0;
+                    break;
+            }
+        }
+
+        private void Addition_Click(object sender, EventArgs e)
+        {
+            firstNumber = Convert.ToDouble(this.DisplayScreen.Text);
+            currentOperation = "+";
+            this.DisplayScreen.Text = "0";
+        }
+
+        private void Substraction_Click(object sender, EventArgs e)
+        {
+            firstNumber = Convert.ToDouble(this.DisplayScreen.Text);
+            currentOperation = "-";
+            this.DisplayScreen.Text = "0";
+        }
+
+        private void Multiplication_Click(object sender, EventArgs e)
+        {
+            firstNumber = Convert.ToDouble(this.DisplayScreen.Text);
+            currentOperation = "*";
+            this.DisplayScreen.Text = "0";
+        }
+
+        private void Division_Click(object sender, EventArgs e)
+        {
+            firstNumber = Convert.ToDouble(this.DisplayScreen.Text);
+            currentOperation = "/";
+            this.DisplayScreen.Text = "0";
+        }
+
+        private void Cosinus_Click(object sender, EventArgs e)
+        {
+            this.DisplayScreen.Text = Convert.ToString(Math.Cos(Convert.ToDouble(this.DisplayScreen.Text)));
         }
     }
 }
