@@ -238,6 +238,7 @@
             this.PowerOfTwo.TabIndex = 17;
             this.PowerOfTwo.Text = "x^2";
             this.PowerOfTwo.UseVisualStyleBackColor = true;
+            this.PowerOfTwo.Click += new System.EventHandler(this.PowerOfTwo_Click);
             // 
             // Radical
             // 
@@ -258,6 +259,7 @@
             this.Module.TabIndex = 20;
             this.Module.Text = "|x|";
             this.Module.UseVisualStyleBackColor = true;
+            this.Module.Click += new System.EventHandler(this.Module_Click);
             // 
             // Cosinus
             // 
@@ -278,6 +280,7 @@
             this.Sinus.TabIndex = 18;
             this.Sinus.Text = "sin";
             this.Sinus.UseVisualStyleBackColor = true;
+            this.Sinus.Click += new System.EventHandler(this.Sinus_Click);
             // 
             // Clear
             // 
@@ -308,6 +311,7 @@
             this.SubstractFromMemory.TabIndex = 26;
             this.SubstractFromMemory.Text = "M-";
             this.SubstractFromMemory.UseVisualStyleBackColor = true;
+            this.SubstractFromMemory.Click += new System.EventHandler(this.SubstractFromMemory_Click);
             // 
             // AddToMemory
             // 
@@ -318,6 +322,7 @@
             this.AddToMemory.TabIndex = 25;
             this.AddToMemory.Text = "M+";
             this.AddToMemory.UseVisualStyleBackColor = true;
+            this.AddToMemory.Click += new System.EventHandler(this.AddToMemory_Click);
             // 
             // RevealMemory
             // 
@@ -328,6 +333,7 @@
             this.RevealMemory.TabIndex = 24;
             this.RevealMemory.Text = "MR";
             this.RevealMemory.UseVisualStyleBackColor = true;
+            this.RevealMemory.Click += new System.EventHandler(this.RevealMemory_Click);
             // 
             // SetMemory
             // 
@@ -338,6 +344,7 @@
             this.SetMemory.TabIndex = 23;
             this.SetMemory.Text = "MS";
             this.SetMemory.UseVisualStyleBackColor = true;
+            this.SetMemory.Click += new System.EventHandler(this.SetMemory_Click);
             // 
             // MemoryScreen
             // 
@@ -402,6 +409,7 @@
             this.Controls.Add(this.Button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

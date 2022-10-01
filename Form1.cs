@@ -3,6 +3,7 @@ namespace Calculator
 
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -100,5 +101,54 @@ namespace Calculator
             this.DisplayScreen.Text = "0";
         }
 
+        private void PowerOfTwo_Click(object sender, EventArgs e)
+        {
+            double powerValue = Convert.ToDouble(this.DisplayScreen.Text);
+            powerValue *= powerValue;
+            this.DisplayScreen.Text = Convert.ToString(powerValue);
+        }
+
+        private void SetMemory_Click(object sender, EventArgs e)
+        {
+            this.MemoryScreen.Text = this.DisplayScreen.Text;
+            this.DisplayScreen.Text = "0";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.MemoryScreen.Text = "0";
+        }
+
+        private void AddToMemory_Click(object sender, EventArgs e)
+        {
+            double currentScreenValue = Convert.ToDouble(this.MemoryScreen.Text);
+            currentScreenValue += Convert.ToDouble(this.DisplayScreen.Text);
+            this.DisplayScreen.Text = "0";
+            this.MemoryScreen.Text = Convert.ToString(currentScreenValue);
+        }
+
+        private void RevealMemory_Click(object sender, EventArgs e)
+        {
+            this.DisplayScreen.Text = this.MemoryScreen.Text;
+            this.MemoryScreen.Text = "0";
+        }
+
+        private void SubstractFromMemory_Click(object sender, EventArgs e)
+        {
+            double currentScreenValue = Convert.ToDouble(this.MemoryScreen.Text);
+            currentScreenValue -= Convert.ToDouble(this.DisplayScreen.Text);
+            this.DisplayScreen.Text = "0";
+            this.MemoryScreen.Text = Convert.ToString(currentScreenValue);
+        }
+
+        private void Module_Click(object sender, EventArgs e)
+        {
+            this.DisplayScreen.Text = Convert.ToString(-1 * Convert.ToDouble(this.DisplayScreen.Text));
+        }
+
+        private void Sinus_Click(object sender, EventArgs e)
+        {
+            this.DisplayScreen.Text = Convert.ToString(Math.Sin(Convert.ToDouble(this.DisplayScreen.Text)));
+        }
     }
 }
