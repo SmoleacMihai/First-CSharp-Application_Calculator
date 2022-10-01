@@ -1,3 +1,5 @@
+using System.Runtime.Intrinsics.Arm;
+
 namespace Calculator
 {
 
@@ -96,6 +98,19 @@ namespace Calculator
                 this.DisplayScreen.Text += Button9.Text;
             }
         }
+
+        private void Button0_Click(object sender, EventArgs e)
+        {
+            if (this.DisplayScreen.Text == "0")
+            {
+                
+            }
+            else
+            {
+                this.DisplayScreen.Text += Button0.Text;
+            }
+        }
+
         private void Clear_Button_Click(object sender, EventArgs e)
         {
             this.DisplayScreen.Text = "0";
@@ -117,6 +132,8 @@ namespace Calculator
         private void Form1_Load(object sender, EventArgs e)
         {
             this.MemoryScreen.Text = "0";
+            this.DisplayScreen.Text = "0";
+
         }
 
         private void AddToMemory_Click(object sender, EventArgs e)
@@ -153,7 +170,36 @@ namespace Calculator
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            this.DisplayScreen.Text = this.DisplayScreen.Text.Remove(this.DisplayScreen.Text.Length - 1);
+            if (this.DisplayScreen.Text.Length == 1)
+            {
+                this.DisplayScreen.Text = "0";
+            } 
+            else
+            {
+                this.DisplayScreen.Text = this.DisplayScreen.Text.Remove(this.DisplayScreen.Text.Length - 1);
+            }
         }
+
+        private void DisplayScreen_TextChanged(object sender, EventArgs e)
+        {
+            int fromBase = 10;
+            int toBaseBin = 2;
+            int toBaseOct = 8;
+            int toBaseHex = 16;
+
+            // Binary
+            string result = Convert.ToString(Convert.ToInt64(this.DisplayScreen.Text, fromBase), toBaseBin);
+            this.BinaryScreen.Text = result;
+
+            // Octal 
+            result = Convert.ToString(Convert.ToInt64(this.DisplayScreen.Text, fromBase), toBaseOct);
+            this.OctalScreen.Text = result;
+
+            // Hex
+            result = Convert.ToString(Convert.ToInt64(this.DisplayScreen.Text, fromBase), toBaseHex);
+            result = result.ToUpper();
+            this.HexazecimalScreen.Text = result;
+        }
+     
     }
 }

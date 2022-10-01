@@ -60,6 +60,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.BinaryScreen = new System.Windows.Forms.TextBox();
+            this.OctalScreen = new System.Windows.Forms.TextBox();
+            this.HexazecimalScreen = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Button1
@@ -191,6 +197,7 @@
             this.Button0.TabIndex = 10;
             this.Button0.Text = "0";
             this.Button0.UseVisualStyleBackColor = true;
+            this.Button0.Click += new System.EventHandler(this.Button0_Click);
             // 
             // Dot
             // 
@@ -319,13 +326,16 @@
             // 
             // DisplayScreen
             // 
+            this.DisplayScreen.BackColor = System.Drawing.SystemColors.Window;
             this.DisplayScreen.Font = new System.Drawing.Font("Segoe UI", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DisplayScreen.Location = new System.Drawing.Point(7, 44);
+            this.DisplayScreen.Location = new System.Drawing.Point(7, 41);
             this.DisplayScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DisplayScreen.Name = "DisplayScreen";
+            this.DisplayScreen.ReadOnly = true;
             this.DisplayScreen.Size = new System.Drawing.Size(372, 68);
             this.DisplayScreen.TabIndex = 22;
             this.DisplayScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.DisplayScreen.TextChanged += new System.EventHandler(this.DisplayScreen_TextChanged);
             // 
             // SubstractFromMemory
             // 
@@ -414,11 +424,71 @@
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
+            // BinaryScreen
+            // 
+            this.BinaryScreen.Location = new System.Drawing.Point(383, 324);
+            this.BinaryScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BinaryScreen.Name = "BinaryScreen";
+            this.BinaryScreen.Size = new System.Drawing.Size(126, 23);
+            this.BinaryScreen.TabIndex = 31;
+            this.BinaryScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // OctalScreen
+            // 
+            this.OctalScreen.Location = new System.Drawing.Point(383, 351);
+            this.OctalScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.OctalScreen.Name = "OctalScreen";
+            this.OctalScreen.Size = new System.Drawing.Size(126, 23);
+            this.OctalScreen.TabIndex = 32;
+            this.OctalScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // HexazecimalScreen
+            // 
+            this.HexazecimalScreen.Location = new System.Drawing.Point(383, 378);
+            this.HexazecimalScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.HexazecimalScreen.Name = "HexazecimalScreen";
+            this.HexazecimalScreen.Size = new System.Drawing.Size(126, 23);
+            this.HexazecimalScreen.TabIndex = 33;
+            this.HexazecimalScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(304, 327);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(34, 15);
+            this.label3.TabIndex = 34;
+            this.label3.Text = "Binar";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(304, 354);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 15);
+            this.label4.TabIndex = 35;
+            this.label4.Text = "Octal";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(304, 381);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 15);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "Hexazecimal";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 323);
+            this.ClientSize = new System.Drawing.Size(515, 407);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.HexazecimalScreen);
+            this.Controls.Add(this.OctalScreen);
+            this.Controls.Add(this.BinaryScreen);
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -493,5 +563,11 @@
         private Label label1;
         private Label label2;
         private Button DeleteButton;
+        private TextBox BinaryScreen;
+        private TextBox OctalScreen;
+        private TextBox HexazecimalScreen;
+        private Label label3;
+        private Label label4;
+        private Label label5;
     }
 }
