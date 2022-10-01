@@ -58,7 +58,6 @@
             this.SetMemory = new System.Windows.Forms.Button();
             this.MemoryScreen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.DeleteButton = new System.Windows.Forms.Button();
             this.BinaryScreen = new System.Windows.Forms.TextBox();
             this.OctalScreen = new System.Windows.Forms.TextBox();
@@ -66,12 +65,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.MemoryClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Button1
             // 
             this.Button1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button1.Location = new System.Drawing.Point(7, 111);
+            this.Button1.Location = new System.Drawing.Point(12, 81);
             this.Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(57, 49);
@@ -83,7 +83,7 @@
             // Button2
             // 
             this.Button2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button2.Location = new System.Drawing.Point(70, 111);
+            this.Button2.Location = new System.Drawing.Point(75, 81);
             this.Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(57, 49);
@@ -95,7 +95,7 @@
             // Button3
             // 
             this.Button3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button3.Location = new System.Drawing.Point(133, 111);
+            this.Button3.Location = new System.Drawing.Point(138, 81);
             this.Button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(57, 49);
@@ -107,7 +107,7 @@
             // Button6
             // 
             this.Button6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button6.Location = new System.Drawing.Point(133, 164);
+            this.Button6.Location = new System.Drawing.Point(138, 134);
             this.Button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button6.Name = "Button6";
             this.Button6.Size = new System.Drawing.Size(57, 49);
@@ -119,7 +119,7 @@
             // Button5
             // 
             this.Button5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button5.Location = new System.Drawing.Point(70, 164);
+            this.Button5.Location = new System.Drawing.Point(75, 134);
             this.Button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button5.Name = "Button5";
             this.Button5.Size = new System.Drawing.Size(57, 49);
@@ -131,7 +131,7 @@
             // Button4
             // 
             this.Button4.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button4.Location = new System.Drawing.Point(7, 164);
+            this.Button4.Location = new System.Drawing.Point(12, 134);
             this.Button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(57, 49);
@@ -143,7 +143,7 @@
             // Button9
             // 
             this.Button9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button9.Location = new System.Drawing.Point(133, 218);
+            this.Button9.Location = new System.Drawing.Point(138, 188);
             this.Button9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button9.Name = "Button9";
             this.Button9.Size = new System.Drawing.Size(57, 49);
@@ -155,7 +155,7 @@
             // Button8
             // 
             this.Button8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button8.Location = new System.Drawing.Point(70, 218);
+            this.Button8.Location = new System.Drawing.Point(75, 188);
             this.Button8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button8.Name = "Button8";
             this.Button8.Size = new System.Drawing.Size(57, 49);
@@ -167,7 +167,7 @@
             // Button7
             // 
             this.Button7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button7.Location = new System.Drawing.Point(7, 218);
+            this.Button7.Location = new System.Drawing.Point(12, 188);
             this.Button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button7.Name = "Button7";
             this.Button7.Size = new System.Drawing.Size(57, 49);
@@ -179,7 +179,7 @@
             // Equal_Symbol
             // 
             this.Equal_Symbol.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Equal_Symbol.Location = new System.Drawing.Point(133, 271);
+            this.Equal_Symbol.Location = new System.Drawing.Point(138, 241);
             this.Equal_Symbol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Equal_Symbol.Name = "Equal_Symbol";
             this.Equal_Symbol.Size = new System.Drawing.Size(119, 49);
@@ -190,7 +190,7 @@
             // Button0
             // 
             this.Button0.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Button0.Location = new System.Drawing.Point(70, 271);
+            this.Button0.Location = new System.Drawing.Point(75, 241);
             this.Button0.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Button0.Name = "Button0";
             this.Button0.Size = new System.Drawing.Size(57, 49);
@@ -202,18 +202,19 @@
             // Dot
             // 
             this.Dot.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Dot.Location = new System.Drawing.Point(7, 271);
+            this.Dot.Location = new System.Drawing.Point(12, 241);
             this.Dot.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dot.Name = "Dot";
             this.Dot.Size = new System.Drawing.Size(57, 49);
             this.Dot.TabIndex = 9;
             this.Dot.Text = ".";
             this.Dot.UseVisualStyleBackColor = true;
+            this.Dot.Click += new System.EventHandler(this.Dot_Click);
             // 
             // Division
             // 
             this.Division.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Division.Location = new System.Drawing.Point(195, 218);
+            this.Division.Location = new System.Drawing.Point(200, 188);
             this.Division.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Division.Name = "Division";
             this.Division.Size = new System.Drawing.Size(57, 49);
@@ -224,7 +225,7 @@
             // Substraction
             // 
             this.Substraction.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Substraction.Location = new System.Drawing.Point(195, 164);
+            this.Substraction.Location = new System.Drawing.Point(200, 134);
             this.Substraction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Substraction.Name = "Substraction";
             this.Substraction.Size = new System.Drawing.Size(57, 49);
@@ -235,7 +236,7 @@
             // Addition
             // 
             this.Addition.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Addition.Location = new System.Drawing.Point(195, 111);
+            this.Addition.Location = new System.Drawing.Point(200, 81);
             this.Addition.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Addition.Name = "Addition";
             this.Addition.Size = new System.Drawing.Size(57, 49);
@@ -246,7 +247,7 @@
             // Multiplication
             // 
             this.Multiplication.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Multiplication.Location = new System.Drawing.Point(259, 164);
+            this.Multiplication.Location = new System.Drawing.Point(264, 134);
             this.Multiplication.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Multiplication.Name = "Multiplication";
             this.Multiplication.Size = new System.Drawing.Size(57, 49);
@@ -257,7 +258,7 @@
             // PowerOfTwo
             // 
             this.PowerOfTwo.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PowerOfTwo.Location = new System.Drawing.Point(259, 271);
+            this.PowerOfTwo.Location = new System.Drawing.Point(264, 241);
             this.PowerOfTwo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PowerOfTwo.Name = "PowerOfTwo";
             this.PowerOfTwo.Size = new System.Drawing.Size(57, 49);
@@ -269,18 +270,19 @@
             // Radical
             // 
             this.Radical.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Radical.Location = new System.Drawing.Point(259, 218);
+            this.Radical.Location = new System.Drawing.Point(264, 188);
             this.Radical.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Radical.Name = "Radical";
             this.Radical.Size = new System.Drawing.Size(57, 49);
             this.Radical.TabIndex = 16;
             this.Radical.Text = "sqrt";
             this.Radical.UseVisualStyleBackColor = true;
+            this.Radical.Click += new System.EventHandler(this.Radical_Click);
             // 
             // Module
             // 
             this.Module.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Module.Location = new System.Drawing.Point(321, 271);
+            this.Module.Location = new System.Drawing.Point(326, 241);
             this.Module.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Module.Name = "Module";
             this.Module.Size = new System.Drawing.Size(57, 49);
@@ -292,7 +294,7 @@
             // Cosinus
             // 
             this.Cosinus.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Cosinus.Location = new System.Drawing.Point(321, 218);
+            this.Cosinus.Location = new System.Drawing.Point(326, 188);
             this.Cosinus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cosinus.Name = "Cosinus";
             this.Cosinus.Size = new System.Drawing.Size(57, 49);
@@ -303,7 +305,7 @@
             // Sinus
             // 
             this.Sinus.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Sinus.Location = new System.Drawing.Point(321, 164);
+            this.Sinus.Location = new System.Drawing.Point(326, 134);
             this.Sinus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Sinus.Name = "Sinus";
             this.Sinus.Size = new System.Drawing.Size(57, 49);
@@ -315,7 +317,7 @@
             // Clear
             // 
             this.Clear.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Clear.Location = new System.Drawing.Point(259, 111);
+            this.Clear.Location = new System.Drawing.Point(264, 81);
             this.Clear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Clear.Name = "Clear";
             this.Clear.Size = new System.Drawing.Size(57, 49);
@@ -328,7 +330,7 @@
             // 
             this.DisplayScreen.BackColor = System.Drawing.SystemColors.Window;
             this.DisplayScreen.Font = new System.Drawing.Font("Segoe UI", 34F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DisplayScreen.Location = new System.Drawing.Point(7, 41);
+            this.DisplayScreen.Location = new System.Drawing.Point(12, 11);
             this.DisplayScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DisplayScreen.Name = "DisplayScreen";
             this.DisplayScreen.ReadOnly = true;
@@ -340,10 +342,10 @@
             // SubstractFromMemory
             // 
             this.SubstractFromMemory.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SubstractFromMemory.Location = new System.Drawing.Point(383, 271);
+            this.SubstractFromMemory.Location = new System.Drawing.Point(454, 188);
             this.SubstractFromMemory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SubstractFromMemory.Name = "SubstractFromMemory";
-            this.SubstractFromMemory.Size = new System.Drawing.Size(126, 49);
+            this.SubstractFromMemory.Size = new System.Drawing.Size(60, 49);
             this.SubstractFromMemory.TabIndex = 26;
             this.SubstractFromMemory.Text = "M-";
             this.SubstractFromMemory.UseVisualStyleBackColor = true;
@@ -352,10 +354,10 @@
             // AddToMemory
             // 
             this.AddToMemory.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.AddToMemory.Location = new System.Drawing.Point(383, 218);
+            this.AddToMemory.Location = new System.Drawing.Point(388, 188);
             this.AddToMemory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddToMemory.Name = "AddToMemory";
-            this.AddToMemory.Size = new System.Drawing.Size(126, 49);
+            this.AddToMemory.Size = new System.Drawing.Size(60, 49);
             this.AddToMemory.TabIndex = 25;
             this.AddToMemory.Text = "M+";
             this.AddToMemory.UseVisualStyleBackColor = true;
@@ -364,7 +366,7 @@
             // RevealMemory
             // 
             this.RevealMemory.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RevealMemory.Location = new System.Drawing.Point(383, 164);
+            this.RevealMemory.Location = new System.Drawing.Point(388, 134);
             this.RevealMemory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RevealMemory.Name = "RevealMemory";
             this.RevealMemory.Size = new System.Drawing.Size(126, 49);
@@ -376,7 +378,7 @@
             // SetMemory
             // 
             this.SetMemory.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SetMemory.Location = new System.Drawing.Point(383, 111);
+            this.SetMemory.Location = new System.Drawing.Point(388, 81);
             this.SetMemory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SetMemory.Name = "SetMemory";
             this.SetMemory.Size = new System.Drawing.Size(126, 49);
@@ -387,9 +389,11 @@
             // 
             // MemoryScreen
             // 
-            this.MemoryScreen.Location = new System.Drawing.Point(383, 86);
+            this.MemoryScreen.BackColor = System.Drawing.SystemColors.Window;
+            this.MemoryScreen.Location = new System.Drawing.Point(388, 56);
             this.MemoryScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MemoryScreen.Name = "MemoryScreen";
+            this.MemoryScreen.ReadOnly = true;
             this.MemoryScreen.Size = new System.Drawing.Size(126, 23);
             this.MemoryScreen.TabIndex = 27;
             this.MemoryScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -397,25 +401,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(453, 62);
+            this.label1.Location = new System.Drawing.Point(458, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 28;
             this.label1.Text = "Memory";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(159, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(199, 15);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Calculator - Made by Smoleac Mihai";
-            // 
             // DeleteButton
             // 
             this.DeleteButton.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.DeleteButton.Location = new System.Drawing.Point(321, 111);
+            this.DeleteButton.Location = new System.Drawing.Point(326, 81);
             this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(57, 49);
@@ -426,27 +421,33 @@
             // 
             // BinaryScreen
             // 
-            this.BinaryScreen.Location = new System.Drawing.Point(383, 324);
+            this.BinaryScreen.BackColor = System.Drawing.SystemColors.Window;
+            this.BinaryScreen.Location = new System.Drawing.Point(93, 299);
             this.BinaryScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BinaryScreen.Name = "BinaryScreen";
+            this.BinaryScreen.ReadOnly = true;
             this.BinaryScreen.Size = new System.Drawing.Size(126, 23);
             this.BinaryScreen.TabIndex = 31;
             this.BinaryScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // OctalScreen
             // 
-            this.OctalScreen.Location = new System.Drawing.Point(383, 351);
+            this.OctalScreen.BackColor = System.Drawing.SystemColors.Window;
+            this.OctalScreen.Location = new System.Drawing.Point(93, 326);
             this.OctalScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OctalScreen.Name = "OctalScreen";
+            this.OctalScreen.ReadOnly = true;
             this.OctalScreen.Size = new System.Drawing.Size(126, 23);
             this.OctalScreen.TabIndex = 32;
             this.OctalScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // HexazecimalScreen
             // 
-            this.HexazecimalScreen.Location = new System.Drawing.Point(383, 378);
+            this.HexazecimalScreen.BackColor = System.Drawing.SystemColors.Window;
+            this.HexazecimalScreen.Location = new System.Drawing.Point(93, 353);
             this.HexazecimalScreen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HexazecimalScreen.Name = "HexazecimalScreen";
+            this.HexazecimalScreen.ReadOnly = true;
             this.HexazecimalScreen.Size = new System.Drawing.Size(126, 23);
             this.HexazecimalScreen.TabIndex = 33;
             this.HexazecimalScreen.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -454,7 +455,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(304, 327);
+            this.label3.Location = new System.Drawing.Point(14, 302);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 15);
             this.label3.TabIndex = 34;
@@ -463,7 +464,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(304, 354);
+            this.label4.Location = new System.Drawing.Point(14, 329);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(35, 15);
             this.label4.TabIndex = 35;
@@ -472,17 +473,30 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(304, 381);
+            this.label5.Location = new System.Drawing.Point(14, 356);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 15);
             this.label5.TabIndex = 36;
             this.label5.Text = "Hexazecimal";
             // 
+            // MemoryClear
+            // 
+            this.MemoryClear.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.MemoryClear.Location = new System.Drawing.Point(388, 241);
+            this.MemoryClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MemoryClear.Name = "MemoryClear";
+            this.MemoryClear.Size = new System.Drawing.Size(126, 49);
+            this.MemoryClear.TabIndex = 37;
+            this.MemoryClear.Text = "MC";
+            this.MemoryClear.UseVisualStyleBackColor = true;
+            this.MemoryClear.Click += new System.EventHandler(this.MemoryClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 407);
+            this.ClientSize = new System.Drawing.Size(526, 380);
+            this.Controls.Add(this.MemoryClear);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -490,7 +504,6 @@
             this.Controls.Add(this.OctalScreen);
             this.Controls.Add(this.BinaryScreen);
             this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MemoryScreen);
             this.Controls.Add(this.SubstractFromMemory);
@@ -561,7 +574,6 @@
         private Button SetMemory;
         private TextBox MemoryScreen;
         private Label label1;
-        private Label label2;
         private Button DeleteButton;
         private TextBox BinaryScreen;
         private TextBox OctalScreen;
@@ -569,5 +581,6 @@
         private Label label3;
         private Label label4;
         private Label label5;
+        private Button MemoryClear;
     }
 }

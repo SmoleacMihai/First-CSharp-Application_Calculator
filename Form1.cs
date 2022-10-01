@@ -101,14 +101,11 @@ namespace Calculator
 
         private void Button0_Click(object sender, EventArgs e)
         {
-            if (this.DisplayScreen.Text == "0")
-            {
-                
-            }
-            else
+            if (!(this.DisplayScreen.Text == "0"))
             {
                 this.DisplayScreen.Text += Button0.Text;
             }
+      
         }
 
         private void Clear_Button_Click(object sender, EventArgs e)
@@ -119,7 +116,9 @@ namespace Calculator
         private void PowerOfTwo_Click(object sender, EventArgs e)
         {
             double powerValue = Convert.ToDouble(this.DisplayScreen.Text);
+            // powerValue = 0.3 * 0.4;
             powerValue *= powerValue;
+            powerValue = Math.Round(powerValue, 5);
             this.DisplayScreen.Text = Convert.ToString(powerValue);
         }
 
@@ -160,7 +159,10 @@ namespace Calculator
 
         private void Module_Click(object sender, EventArgs e)
         {
-            this.DisplayScreen.Text = Convert.ToString(-1 * Convert.ToDouble(this.DisplayScreen.Text));
+            if (!(this.DisplayScreen.Text == "0"))
+            {
+                this.DisplayScreen.Text = Convert.ToString(-1 * Convert.ToDouble(this.DisplayScreen.Text));
+            }
         }
 
         private void Sinus_Click(object sender, EventArgs e)
@@ -187,19 +189,46 @@ namespace Calculator
             int toBaseOct = 8;
             int toBaseHex = 16;
 
-            // Binary
-            string result = Convert.ToString(Convert.ToInt64(this.DisplayScreen.Text, fromBase), toBaseBin);
-            this.BinaryScreen.Text = result;
+            try
+            {
+                if (true)
+                {
+                    // Binary
+                    string result = Convert.ToString(Convert.ToInt64(this.DisplayScreen.Text, fromBase), toBaseBin);
+                    this.BinaryScreen.Text = result;
 
-            // Octal 
-            result = Convert.ToString(Convert.ToInt64(this.DisplayScreen.Text, fromBase), toBaseOct);
-            this.OctalScreen.Text = result;
+                    // Octal 
+                    result = Convert.ToString(Convert.ToInt64(this.DisplayScreen.Text, fromBase), toBaseOct);
+                    this.OctalScreen.Text = result;
 
-            // Hex
-            result = Convert.ToString(Convert.ToInt64(this.DisplayScreen.Text, fromBase), toBaseHex);
-            result = result.ToUpper();
-            this.HexazecimalScreen.Text = result;
+                    // Hex
+                    result = Convert.ToString(Convert.ToInt64(this.DisplayScreen.Text, fromBase), toBaseHex);
+                    result = result.ToUpper();
+                    this.HexazecimalScreen.Text = result;
+                }
+
+            } catch { }
         }
-     
+
+        private void Radical_Click(object sender, EventArgs e)
+        {
+            double sqrtValue = Convert.ToDouble(this.DisplayScreen.Text);
+            sqrtValue = Math.Sqrt(sqrtValue);
+            sqrtValue = Math.Round(sqrtValue, 5);
+            this.DisplayScreen.Text = Convert.ToString(sqrtValue);
+        }
+
+        private void Dot_Click(object sender, EventArgs e)
+        {
+            if (!(this.DisplayScreen.Text == "0,") && (this.DisplayScreen.Text == "0"))
+            {
+                this.DisplayScreen.Text = "0,";
+            }
+        }
+
+        private void MemoryClear_Click(object sender, EventArgs e)
+        {
+            this.MemoryScreen.Text = "0";
+        }
     }
 }
