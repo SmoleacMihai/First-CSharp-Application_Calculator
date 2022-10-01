@@ -150,5 +150,10 @@ namespace Calculator
         {
             this.DisplayScreen.Text = Convert.ToString(Math.Sin(Convert.ToDouble(this.DisplayScreen.Text)));
         }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            this.DisplayScreen.Text = this.DisplayScreen.Text.Remove(this.DisplayScreen.Text.Length - 1);
+        }
     }
 }
