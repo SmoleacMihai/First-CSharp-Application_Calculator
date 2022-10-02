@@ -250,25 +250,27 @@ namespace Calculator
             {
                 case "+":
                     this.DisplayScreen.Text = Convert.ToString(firstNumber + secondNumber);
-                    firstNumber = 0;
-                    secondNumber = 0;
+                    
                     break;
                 case "-":
                     this.DisplayScreen.Text = Convert.ToString(firstNumber - secondNumber);
-                    firstNumber = 0;
-                    secondNumber = 0;
+                    
                     break;
                 case "*":
                     this.DisplayScreen.Text = Convert.ToString(firstNumber * secondNumber);
-                    firstNumber = 0;
-                    secondNumber = 0;
+                    
                     break;
                 case "/":
                     this.DisplayScreen.Text = Convert.ToString(firstNumber / secondNumber);
-                    firstNumber = 0;
-                    secondNumber = 0;
+                
+                    break;
+                default:
                     break;
             }
+
+            firstNumber = 0;
+            secondNumber = 0;
+            currentOperation = "";
         }
 
         private void Addition_Click(object sender, EventArgs e)
