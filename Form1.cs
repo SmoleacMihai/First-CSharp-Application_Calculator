@@ -1,4 +1,4 @@
-using System.Runtime.Intrinsics.Arm;
+﻿using System.Runtime.Intrinsics.Arm;
 
 namespace Calculator
 {
@@ -136,7 +136,7 @@ namespace Calculator
         {
             this.MemoryScreen.Text = "0";
             this.DisplayScreen.Text = "0";
-            
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
         }
 
@@ -193,6 +193,17 @@ namespace Calculator
 
             try
             {
+                if(this.DisplayScreen.Text == "NaN")
+                {
+                    this.DisplayScreen.Text = "0";
+                }
+
+                if(this.DisplayScreen.Text == "∞") {
+                    Form2 errorForm = new Form2();
+                    errorForm.Show();
+                    this.DisplayScreen.Text = "0";
+
+                }
               
                 if (this.DisplayScreen.Text == "-")
                 {
