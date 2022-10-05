@@ -144,27 +144,24 @@ namespace Calculator
         {
             double currentScreenValue = Convert.ToDouble(this.MemoryScreen.Text);
             currentScreenValue += Convert.ToDouble(this.DisplayScreen.Text);
-            this.DisplayScreen.Text = "0";
             this.MemoryScreen.Text = Convert.ToString(currentScreenValue);
         }
 
         private void RevealMemory_Click(object sender, EventArgs e)
         {
             this.DisplayScreen.Text = this.MemoryScreen.Text;
-            this.MemoryScreen.Text = "0";
         }
 
         private void SubstractFromMemory_Click(object sender, EventArgs e)
         {
             double currentScreenValue = Convert.ToDouble(this.MemoryScreen.Text);
             currentScreenValue -= Convert.ToDouble(this.DisplayScreen.Text);
-            this.DisplayScreen.Text = "0";
             this.MemoryScreen.Text = Convert.ToString(currentScreenValue);
         }
 
         private void Module_Click(object sender, EventArgs e)
         {
-            if (!(this.DisplayScreen.Text == "0"))
+            if (!(this.DisplayScreen.Text == "0") && (Convert.ToDouble(this.DisplayScreen.Text) < 0))
             {
                 this.DisplayScreen.Text = Convert.ToString(-1 * Convert.ToDouble(this.DisplayScreen.Text));
             }
@@ -196,7 +193,12 @@ namespace Calculator
 
             try
             {
-                if (true)
+              
+                if (this.DisplayScreen.Text == "-")
+                {
+                    this.DisplayScreen.Text = "0";
+                }
+                if (Convert.ToDouble(this.DisplayScreen.Text) >= 0)
                 {
                     // Binary
                     string result = Convert.ToString(Convert.ToInt64(this.DisplayScreen.Text, fromBase), toBaseBin);
@@ -211,7 +213,13 @@ namespace Calculator
                     result = result.ToUpper();
                     this.HexazecimalScreen.Text = result;
                 }
+                else
+                {
+                    this.BinaryScreen.Text = "0"; 
+                    this.OctalScreen.Text = "0";
+                    this.HexazecimalScreen.Text = "0";
 
+                }
             } catch { }
         }
 
@@ -225,10 +233,10 @@ namespace Calculator
 
         private void Dot_Click(object sender, EventArgs e)
         {
-            bool dotPresent = this.DisplayScreen.Text.IndexOf(",") == -1;
+            bool dotPresent = this.DisplayScreen.Text.IndexOf(".") == -1;
             if (dotPresent)
             {
-                this.DisplayScreen.Text += ",";
+                this.DisplayScreen.Text += ".";
             }
 
 
@@ -261,7 +269,14 @@ namespace Calculator
                     
                     break;
                 case "/":
-                    this.DisplayScreen.Text = Convert.ToString(firstNumber / secondNumber);
+                    if (secondNumber == 0)
+                    {
+                        //this.DisplayScreen.Text = "Asa nu se poate :)";
+                        Form2 errorForm = new Form2();
+                        errorForm.Show();
+                        return;
+                    }
+                    this.DisplayScreen.Text = Convert.ToString(Convert.ToDouble(firstNumber / secondNumber));
                 
                     break;
                 default:
