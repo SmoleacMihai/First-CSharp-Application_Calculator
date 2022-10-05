@@ -1,0 +1,17 @@
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\bin\Debug\net6.0-windows\Calculator.exe
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\bin\Debug\net6.0-windows\Calculator.deps.json
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\bin\Debug\net6.0-windows\Calculator.runtimeconfig.json
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\bin\Debug\net6.0-windows\Calculator.dll
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\bin\Debug\net6.0-windows\Calculator.pdb
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\Calculator.csproj.AssemblyReference.cache
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\Calculator.Form1.resources
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\Calculator.csproj.GenerateResource.cache
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\Calculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\Calculator.AssemblyInfoInputs.cache
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\Calculator.AssemblyInfo.cs
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\Calculator.csproj.CoreCompileInputs.cache
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\Calculator.dll
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\refint\Calculator.dll
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\Calculator.pdb
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\Calculator.genruntimeconfig.cache
+D:\projects\oop\lab1\final_version\First-CSharp-Application_Calculator\obj\Debug\net6.0-windows\ref\Calculator.dll
