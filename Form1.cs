@@ -278,11 +278,7 @@ namespace Calculator
                     
                     break;
                 case "-":
-                    if(currentOperation == "*")
-                    {
                         this.DisplayScreen.Text = Convert.ToString(firstNumber - secondNumber);
-                    }
-                    
                     break;
                 case "*":
                     this.DisplayScreen.Text = Convert.ToString(firstNumber * secondNumber);
