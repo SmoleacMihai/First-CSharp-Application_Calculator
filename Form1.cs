@@ -237,6 +237,12 @@ namespace Calculator
         private void Radical_Click(object sender, EventArgs e)
         {
             double sqrtValue = Convert.ToDouble(this.DisplayScreen.Text);
+            if (sqrtValue < 0)
+            {
+                Form2 errorForm = new Form2();
+                errorForm.Show();
+                this.DisplayScreen.Text = "0";
+            }
             sqrtValue = Math.Sqrt(sqrtValue);
             sqrtValue = Math.Round(sqrtValue, 2);
             this.DisplayScreen.Text = Convert.ToString(sqrtValue);
@@ -272,7 +278,10 @@ namespace Calculator
                     
                     break;
                 case "-":
-                    this.DisplayScreen.Text = Convert.ToString(firstNumber - secondNumber);
+                    if(currentOperation == "*")
+                    {
+                        this.DisplayScreen.Text = Convert.ToString(firstNumber - secondNumber);
+                    }
                     
                     break;
                 case "*":
